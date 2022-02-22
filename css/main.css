@@ -3,3 +3,11 @@
     max-width: 100%;
 }
 
+.modal_hidden{
+    display: none;
+}
+
+.modal_open{
+    display: block;
+}
+

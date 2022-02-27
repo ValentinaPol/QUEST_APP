@@ -59,29 +59,30 @@
         <span><i class="fa-solid fa-cart-shopping"></i></span>
       </div>
       <div class="row pt-3">
-        <div class="shopping-list">
-          <table class="table table-dark table-striped">
+        <div class="shopping-list" id="shopping-list">
+          <table class="table table-dark table-striped" id="product-card">
             <thead>
               <tr>
                 <th scope="col-2">Изображение</th>
                 <th scope="col-6">Описание товара</th>
                 <th scope="col-1">Количество</th>
                 <th scope="col-1">Цена</th>
-                <th scope="col-1">Стоимость</th>
                 <th scope="col-1"></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><img src="./images/arizona.jpg" alt="" class="image-shopping-custom"></td>
-                <td>Однажды в Аризоне</td>
-                <td><a class="waves-effect btn-light btn">-</a> 1 <a class="waves-effect btn-light btn">+</a></td>
-                <td>12,99</td>
-                <td>12,99</td>
-                <td><i class="fa-solid fa-trash-can"></i></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
+          <div class="d-flex justify-content-end">
+            <p id="total-price">0 BYN</p>
+          </div>
           <div class="d-flex justify-content-end"> 
             <a class="btn btn-info" id="checkout-btn">Оформить заказ</a>
           </div>
@@ -232,10 +233,10 @@
       <div class="row">
         <div class="d-flex justify-content-around">
           <!-- 1 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/rabbit.jpg" class="card-img-top" alt="По следам белого кролика">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/rabbit.jpg" class="card-img-top image-quest" alt="По следам белого кролика">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">По следам белого кролика</h5>
+              <h5 class="card-title name-quest">По следам белого кролика</h5>
               <p class="card-text type-quest text-info mb-0">Квест</p>
               <p class="card-text mb-0">Количество игроков: <span>2-6</span></p>
               <p class="card-text time-quest">Время: <span>60 мин</span></p>
@@ -249,10 +250,10 @@
           </div>
 
           <!-- 2 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/hospital.jpg" class="card-img-top" alt="Психушка">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/hospital.jpg" class="card-img-top image-quest" alt="Психушка">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Психушка</h5>
+              <h5 class="card-title name-quest">Психушка</h5>
               <p class="card-text type-quest text-info mb-0">Перформанс</p>
               <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
               <p class="card-text time-quest">Время: <span>80 мин</span></p>
@@ -266,10 +267,10 @@
           </div>
 
           <!-- 3 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/it.jpg" class="card-img-top" alt="Оно">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/it.jpg" class="card-img-top image-quest" alt="Оно">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Оно</h5>
+              <h5 class="card-title name-quest">Оно</h5>
               <p class="card-text type-quest text-info mb-0">Перформанс</p>
               <p class="card-text mb-0">Количество игроков: <span>2-6</span></p>
               <p class="card-text time-quest">Время: <span>70 мин</span></p>
@@ -283,10 +284,10 @@
           </div>
 
           <!-- 4 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/fort-boyard.jpg" class="card-img-top" alt="Форт Боярд">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/fort-boyard.jpg" class="card-img-top image-quest" alt="Форт Боярд">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Форт Боярд</h5>
+              <h5 class="card-title name-quest">Форт Боярд</h5>
               <p class="card-text type-quest text-info mb-0">Экшт-игра</p>
               <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
               <p class="card-text time-quest">Время: <span>60 мин</span></p>
@@ -304,10 +305,10 @@
       <div class="row mt-4">
         <div class="d-flex justify-content-around">
           <!-- 5 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/dragon.jpg" class="card-img-top" alt="Сокровище дракона">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/dragon.jpg" class="card-img-top image-quest" alt="Сокровище дракона">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Сокровище дракона</h5>
+              <h5 class="card-title name-quest">Сокровище дракона</h5>
               <p class="card-text type-quest text-info mb-0">Квест</p>
               <p class="card-text mb-0">Количество игроков: <span>4-6</span></p>
               <p class="card-text time-quest">Время: <span>45 мин</span></p>
@@ -321,10 +322,10 @@
           </div>
 
           <!-- 6 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/hotel.jpg" class="card-img-top" alt="Отель с призраками">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/hotel.jpg" class="card-img-top image-quest" alt="Отель с призраками">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Отель с призраками</h5>
+              <h5 class="card-title name-quest">Отель с призраками</h5>
               <p class="card-text type-quest text-info mb-0">Перформанс</p>
               <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
               <p class="card-text time-quest">Время: <span>60 мин</span></p>
@@ -338,10 +339,10 @@
           </div>
 
           <!-- 7 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/mirrors.jpg" class="card-img-top" alt="Зеркальный лабиринт">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/mirrors.jpg" class="card-img-top image-quest" alt="Зеркальный лабиринт">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Зеркальный лабиринт</h5>
+              <h5 class="card-title name-quest">Зеркальный лабиринт</h5>
               <p class="card-text type-quest text-info mb-0">Экшн-игра</p>
               <p class="card-text mb-0">Количество игроков: <span>10</span></p>
               <p class="card-text time-quest">Время: <span>60 мин</span></p>
@@ -355,10 +356,10 @@
           </div>
 
           <!-- 8 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/supernatural.jpg" class="card-img-top" alt="Сверхъестественное">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/supernatural.jpg" class="card-img-top image-quest" alt="Сверхъестественное">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Сверхъестественное</h5>
+              <h5 class="card-title name-quest">Сверхъестественное</h5>
               <p class="card-text type-quest text-info mb-0">Квест</p>
               <p class="card-text mb-0">Количество игроков: <span>2-4</span></p>
               <p class="card-text time-quest">Время: <span>70 мин</span></p>
@@ -376,10 +377,10 @@
       <div class="row mt-4">
         <div class="d-flex justify-content-around">
           <!-- 9 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/magic-hide.jpg" class="card-img-top" alt="Магическое исчезновение">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/magic-hide.jpg" class="card-img-top image-quest" alt="Магическое исчезновение">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Магическое исчезновение</h5>
+              <h5 class="card-title name-quest">Магическое исчезновение</h5>
               <p class="card-text type-quest text-info mb-0">Квест</p>
               <p class="card-text mb-0">Количество игроков: <span>2-6</span></p>
               <p class="card-text time-quest">Время: <span>60 мин</span></p>
@@ -393,10 +394,10 @@
           </div>
 
           <!-- 10 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/ghosts.jpg" class="card-img-top" alt="Запертые души">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/ghosts.jpg" class="card-img-top image-quest" alt="Запертые души">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Запертые души</h5>
+              <h5 class="card-title name-quest">Запертые души</h5>
               <p class="card-text type-quest text-info mb-0">Перформанс</p>
               <p class="card-text mb-0">Количество игроков: <span>4-8</span></p>
               <p class="card-text time-quest">Время: <span>50 мин</span></p>
@@ -410,10 +411,10 @@
           </div>
 
           <!-- 11 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/arizona.jpg" class="card-img-top" alt="Однажды в Аризоне">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/arizona.jpg" class="card-img-top image-quest" alt="Однажды в Аризоне">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Однажды в Аризоне</h5>
+              <h5 class="card-title name-quest">Однажды в Аризоне</h5>
               <p class="card-text type-quest text-info mb-0">Квест</p>
               <p class="card-text mb-0">Количество игроков: <span>3-6</span></p>
               <p class="card-text time-quest">Время: <span>80 мин</span></p>
@@ -427,10 +428,10 @@
           </div>
 
           <!-- 12 -->
-          <div class="card col-3 bg-secondary" style="width: 18rem;">
-            <img src="./images/saw.jpg" class="card-img-top" alt="Пила">
+          <div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
+            <img src="./images/saw.jpg" class="card-img-top image-quest" alt="Пила">
             <div class="card-body bg-secondary text-white">
-              <h5 class="card-title">Пила</h5>
+              <h5 class="card-title name-quest">Пила</h5>
               <p class="card-text type-quest text-info mb-0">Квест</p>
               <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
               <p class="card-text time-quest">Время: <span>60 мин</span></p>
@@ -449,18 +450,21 @@
     <!-- Modal -->
     <div class="container modal_hidden" id="modal-quests-information">
       <div class="row">
-        <div class="modal-dialog position-fixed top-50 start-50 translate-middle col-12 w-75">
+        <div class="modal-dialog position-fixed top-50 start-50 translate-middle col-12 w-75 overflow-auto">
           <div class="modal-content bg-light text-dark">
             <div class="modal-header">
               <h5 class="modal-title" id="modal-title1">По следам белого кролика</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+          
+            <img src="./images/dragon.jpg" class="card-img-top" alt="картинка квеста" id="image-card-quest">
             <div class="modal-body" id="modal-body1">
               Злая Красная королева задумала коварный план: заточить Белого кролика, который может провести любого мечтателя в волшебный мир – Страну чудес. И только ваша команда в силах предотвратить это злодеяние, но для этого вам придется пройти затейливым маршрутом и решить уйму головоломок.
             </div>
+            <div class="price-quest px-3 mb-2" id="price-quest">Цена сертификата: <span> </span></div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary btn-modal-close" data-bs-dismiss="modal">Закрыть</button>
-              <button type="button" class="btn btn-info">Приобрести сертификат</button>
+              <button type="button" class="btn btn-info" id="sell-quest">Приобрести сертификат</button>
             </div>
           </div>
         </div>
@@ -470,6 +474,8 @@
 
 
   <script src="./js/modalInfoQuests.js"></script>
+  <script src="./js/addQuestsInShoppingBasket.js"></script>
+
 
 
   <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

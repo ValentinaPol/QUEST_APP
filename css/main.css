@@ -11,3 +11,17 @@
     display: block;
 }
 
+.block-hidden{
+    display: none; 
+}
+
+.block-open{
+    display: block;
+}
+
+.error-massage{
+    color: red;
+    font-size: 12px;
+    display: none; 
+}
+

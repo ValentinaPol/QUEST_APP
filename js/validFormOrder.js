@@ -98,47 +98,47 @@ inputNumberHouse.addEventListener('blur', validateNumberHouse);
 formOrder.addEventListener('submit', (event) =>{
     var isErrorFound = false;
     if(!validateName() && !isErrorFound){
-        form.elements.developerName.scrollIntoView();
-        form.elements.developerName.focus();
+        inputName.scrollIntoView();
+        inputName.focus();
         isErrorFound = true;
         event.preventDefault();
 
     };
     if(!validateSurname() && !isErrorFound){
-        form.elements.nameSite.scrollIntoView();
-        form.elements.nameSite.focus();
+        inputSurname.scrollIntoView();
+        inputSurname.focus();
         isErrorFound = true;
         event.preventDefault();
     };
     if(!validatePhoneNumber() && !isErrorFound){
-        form.elements.urlSite.scrollIntoView();
-        form.elements.urlSite.focus();
+        inputPhoneNumber.scrollIntoView();
+        inputPhoneNumber.focus();
         isErrorFound = true;
         event.preventDefault();
     };
     if(!validateEmail() && !isErrorFound){
-        form.elements.dateStartSite.scrollIntoView();
-        form.elements.dateStartSite.focus();
+        inputEmail.scrollIntoView();
+        inputEmail.focus();
         isErrorFound = true;
         event.preventDefault();
     };
     if(!validateCity() && !isErrorFound){
-        form.elements.visitorsDay.scrollIntoView();
-        form.elements.visitorsDay.focus();
+        inputCity.scrollIntoView();
+        inputCity.focus();
         isErrorFound = true;
         event.preventDefault();
     };
     if(!validateStreet() && !isErrorFound){
-        form.elements.emailCommunication.scrollIntoView();
-        form.elements.emailCommunication.focus();
+        inputStreet.scrollIntoView();
+        inputStreet.focus();
         isErrorFound = true;
         event.preventDefault();
     };
-    //validateRadioPlace();
     if(!validateNumberHouse() && !isErrorFound){
-        form.elements.siteDescription.scrollIntoView();
-        form.elements.siteDescription.focus();
+        inputNumberHouse.scrollIntoView();
+        inputNumberHouse.focus();
         isErrorFound = true;
         event.preventDefault();
     };
 })
+

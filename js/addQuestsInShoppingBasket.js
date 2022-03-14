@@ -7,6 +7,19 @@ let shoppingListBasket = document.querySelector('#shopping-list');
 let totalPrice = document.querySelector('#total-price');
 let addQuestList = document.querySelector('#add-quest-list');
 let btnCheckout = document.querySelector('#checkout-btn');
+let iconShoppingBasket = document.querySelector('.fa-cart-shopping');
+//const formOrder = document.querySelector('#order-form');
+
+
+iconShoppingBasket.addEventListener('click', function(){
+    document.querySelector('#header-text').classList.add('block-hidden');
+    document.querySelector('#info-quests').classList.add('block-hidden');
+    document.querySelector('#select-container').classList.add('block-hidden');
+    document.querySelector('#sort-container').classList.add('block-hidden');
+    shoppingListBasket.classList.remove('block-hidden');
+    shoppingListBasket.style.minHeight = '100vh';
+
+})
 
 function addQuestBasket(){
     if (addQuestList.children[0].tagName === 'P'){
@@ -80,4 +93,9 @@ function addRepeatQuest(){
     }
     return false;
 }
+
+btnCheckout.addEventListener('click', () => {
+    shoppingListBasket.classList.add('block-hidden');
+    formOrder.classList.remove('block-hidden');
+})
 

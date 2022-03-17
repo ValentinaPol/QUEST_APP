@@ -25,3 +25,12 @@
     display: none; 
 }
 
+.row-custom{
+    --bs-gutter-x: 0;
+}
+
+.card-quest{
+    width: 300px;
+    margin-top: 30px;
+}
+

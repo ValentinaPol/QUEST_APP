@@ -4,7 +4,7 @@ const displaySearchQuests = async (allQuests) => {
     allQuests = allQuests || await getQuestsInfo();
     let questContainer = document.querySelector('#info-quests');
     questContainer.innerHTML = '';
-    questContainer.style.minHeight = '100vh';
+    document.querySelector('#quest-container').style.minHeight = '100vh';
     allQuests.forEach((quest) => {
         questContainer.innerHTML += `
         <div class="card col-3 bg-secondary card-quest">
@@ -19,7 +19,7 @@ const displaySearchQuests = async (allQuests) => {
             <div class="card-body">
             <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop" data-numb="1">Подробнее</button>
-            <button type="button" class="btn btn-info">Забронировать</button>
+            <button type="button" class="btn btn-info">Приобрести</button>
             </div>
         </div>
         ` 

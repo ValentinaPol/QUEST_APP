@@ -1,14 +1,6 @@
 const sortButtons = document.querySelector('#sort-container');
 const questListTags = document.querySelector('#info-quests');
 
-
-sortButtons.addEventListener('click', (event) => {
-  if(event.target.tagName === 'BUTTON'){
-    let tag = event.target.dataset.tag;
-    renderTypeQuestsList(tag);
-  }  
-})
-
 const renderTypeQuestsList = async (tag) => {
   let data = await getQuestsInfo();
   let questContainer = document.querySelector('#info-quests');
@@ -28,10 +20,19 @@ const renderTypeQuestsList = async (tag) => {
         <div class="card-body">
           <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
           data-bs-target="#staticBackdrop" data-numb="1">Подробнее</button>
-          <button type="button" class="btn btn-info">Забронировать</button>
+          <button type="button" class="btn btn-info">Приобрести</button>
         </div>
       </div>
       ` 
     }    
   })
 }
+
+
+sortButtons.addEventListener('click', (event) => {
+  if(event.target.tagName === 'BUTTON'){
+    let tag = event.target.dataset.tag;
+    renderTypeQuestsList(tag);
+  }  
+})
+

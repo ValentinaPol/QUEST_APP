@@ -47,10 +47,10 @@
               <a class="nav-link">Контакты</a>
             </li>
           </ul>
-          <form class="d-flex">
+          <!--<form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Поиск квеста" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Поиск</button> 
-          </form>
+          </form>-->
         </div>
       </div>
     </nav>
@@ -189,15 +189,15 @@
     <div class="container mb-3" id="select-container">
       <div class="row">
         <div class="col-3">
-          <select class="form-select" id="quest-type" aria-label="Default select example">
+          <select class="form-select" id="quest-type" aria-label="Default select example" data-type="type">
             <option selected>Тип квеста</option>
             <option value="1">Квест</option>
-            <option value="2">Квест-игра</option>
+            <option value="2">Экшн-игра</option>
             <option value="3">Перформанс</option>
           </select>
         </div>
         <div class="col-3">
-          <select class="form-select" id="amount-participant" aria-label="Default select example">
+          <select class="form-select" id="amount-participant" aria-label="Default select example" data-type="players">
             <option selected>Количество игроков</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -212,19 +212,23 @@
           </select>
         </div>
         <div class="col-3">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select class="form-select" aria-label="Default select example" data-type="age">
+            <option selected>Возраст</option>
+            <option value="1">8+</option>
+            <option value="2">10+</option>
+            <option value="3">12+</option>
+            <option value="4">14+</option>
+            <option value="5">16+</option>
           </select>
         </div>
         <div class="col-3">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select class="form-select" aria-label="Default select example" data-type="time">
+            <option selected>Время квеста</option>
+            <option value="1">45 мин</option>
+            <option value="2">50 мин</option>
+            <option value="3">60 мин</option>
+            <option value="4">70 мин</option>
+            <option value="5">80 мин</option>
           </select>
         </div>
       </div>
@@ -245,225 +249,15 @@
         </div>
       </div>
     </div>
-
-    <!--<div class="container" id="info-quests">
-      <div class="row">
-        <div class="d-flex justify-content-around">
-          <!-- 1 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/rabbit.jpg" class="card-img-top image-quest" alt="По следам белого кролика">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">По следам белого кролика</h5>
-              <p class="card-text type-quest text-info mb-0">Квест</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-6</span></p>
-              <p class="card-text time-quest">Время: <span>60 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>14+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" data-numb="1">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 2 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/hospital.jpg" class="card-img-top image-quest" alt="Психушка">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Психушка</h5>
-              <p class="card-text type-quest text-info mb-0">Перформанс</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
-              <p class="card-text time-quest">Время: <span>80 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>16+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop2" data-numb="2">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 3 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/it.jpg" class="card-img-top image-quest" alt="Оно">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Оно</h5>
-              <p class="card-text type-quest text-info mb-0">Перформанс</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-6</span></p>
-              <p class="card-text time-quest">Время: <span>70 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>16+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop3" data-numb="3">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 4 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/fort-boyard.jpg" class="card-img-top image-quest" alt="Форт Боярд">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Форт Боярд</h5>
-              <p class="card-text type-quest text-info mb-0">Экшн-игра</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
-              <p class="card-text time-quest">Время: <span>60 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>10+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop4" data-numb="4">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-9">
+        <div class="input-group mb-3">
+          <i class="fa-solid fa-magnifying-glass" id="search-quest-picture"></i>
+          <input type="text" class="form-control" placeholder="Введите название квеста" id="search-value">
         </div>
       </div>
-
-      <div class="row mt-4">
-        <div class="d-flex justify-content-around">
-          <!-- 5 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/dragon.jpg" class="card-img-top image-quest" alt="Сокровище дракона">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Сокровище дракона</h5>
-              <p class="card-text type-quest text-info mb-0">Квест</p>
-              <p class="card-text mb-0">Количество игроков: <span>4-6</span></p>
-              <p class="card-text time-quest">Время: <span>45 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>8+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop5" data-numb="5">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 6 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/hotel.jpg" class="card-img-top image-quest" alt="Отель с призраками">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Отель с призраками</h5>
-              <p class="card-text type-quest text-info mb-0">Перформанс</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
-              <p class="card-text time-quest">Время: <span>60 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>16+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop6" data-numb="6">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 7 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/mirrors.jpg" class="card-img-top image-quest" alt="Зеркальный лабиринт">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Зеркальный лабиринт</h5>
-              <p class="card-text type-quest text-info mb-0">Экшн-игра</p>
-              <p class="card-text mb-0">Количество игроков: <span>10</span></p>
-              <p class="card-text time-quest">Время: <span>60 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>8+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop7" data-numb="7">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 8 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/supernatural.jpg" class="card-img-top image-quest" alt="Сверхъестественное">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Сверхъестественное</h5>
-              <p class="card-text type-quest text-info mb-0">Квест</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-4</span></p>
-              <p class="card-text time-quest">Время: <span>70 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>16+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop4" data-numb="8">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="d-flex justify-content-around">
-          <!-- 9 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/magic-hide.jpg" class="card-img-top image-quest" alt="Магическое исчезновение">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Магическое исчезновение</h5>
-              <p class="card-text type-quest text-info mb-0">Квест</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-6</span></p>
-              <p class="card-text time-quest">Время: <span>60 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>8+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop9" data-numb="9">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 10 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/ghosts.jpg" class="card-img-top image-quest" alt="Запертые души">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Запертые души</h5>
-              <p class="card-text type-quest text-info mb-0">Перформанс</p>
-              <p class="card-text mb-0">Количество игроков: <span>4-8</span></p>
-              <p class="card-text time-quest">Время: <span>50 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>16+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop10" data-numb="10">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 11 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/arizona.jpg" class="card-img-top image-quest" alt="Однажды в Аризоне">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Однажды в Аризоне</h5>
-              <p class="card-text type-quest text-info mb-0">Квест</p>
-              <p class="card-text mb-0">Количество игроков: <span>3-6</span></p>
-              <p class="card-text time-quest">Время: <span>80 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>12+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop11" data-numb="11">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-
-          <!-- 12 -->
-          <!--<div class="card col-3 bg-secondary card-quest" style="width: 18rem;">
-            <img src="./images/saw.jpg" class="card-img-top image-quest" alt="Пила">
-            <div class="card-body bg-secondary text-white">
-              <h5 class="card-title name-quest">Пила</h5>
-              <p class="card-text type-quest text-info mb-0">Квест</p>
-              <p class="card-text mb-0">Количество игроков: <span>2-5</span></p>
-              <p class="card-text time-quest">Время: <span>60 мин</span></p>
-              <p class="card-text age-quest">Возраст: <span>16+</span></p>
-            </div>
-            <div class="card-body">
-              <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop12" data-numb="12">Подробнее</button>
-              <button type="button" class="btn btn-info">Забронировать</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>-->
+    </div>
+    
 
     <div class="container">
       <div class="row justify-content-around row-custom" id="info-quests">
@@ -481,7 +275,7 @@
           <div class="card-body">
             <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
               data-bs-target="#staticBackdrop" data-numb="1">Подробнее</button>
-            <button type="button" class="btn btn-info">Забронировать</button>
+            <button type="button" class="btn btn-info">Купить</button>
           </div>
         </div>-->
   
@@ -534,6 +328,8 @@
   <script src="./js/addQuestsInShoppingBasket.js"></script>
   <script src="./js/validFormOrder.js"></script>
   <script src="./js/sortButtonsQuests.js"></script>
+  <script src="./js/questsFilter.js"></script>
+  <script src="./js/searchQuests.js"></script>
 
 
 

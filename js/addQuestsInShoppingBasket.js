@@ -22,6 +22,12 @@ iconShoppingBasket.addEventListener('click', function(){
 
 })
 
+const addIconBasketBusy = () => {
+    if (addQuestList.children[0].tagName !== 'P'){
+        iconBasketBusy.classList.remove('block-hidden');
+    }
+}
+
 function addQuestBasket(){
     if (addQuestList.children[0].tagName === 'P'){
         addQuestList.children[0].remove();
@@ -40,10 +46,9 @@ function addQuestBasket(){
         `
         btnCheckout.classList.remove('block-hidden');
         btnCheckout.classList.add('block-open');
-        iconBasketBusy.classList.remove('block-hidden');
         document.querySelector('#search-box').style.display = 'none';
+        addIconBasketBusy();
     }
-    
     getTotalPrice();
 }
 
@@ -64,6 +69,7 @@ function getTotalPrice(){
     for (let questItem of addQuestList.children){
         totalPrice.innerHTML = Number(totalPrice.innerHTML) + (parseInt(questItem.children[3].innerHTML)*Number(questItem.children[2].children[1].innerHTML));
     }
+    saveQuests();
 }
 
 function shoppingBasketEmpty(){
@@ -74,8 +80,7 @@ function shoppingBasketEmpty(){
         btnCheckout.classList.remove('block-open');
         btnCheckout.classList.add('block-hidden');
         iconBasketBusy.classList.add('block-hidden');
-    }
-    
+    }  
 }
 
 shoppingBasketEmpty();
@@ -103,9 +108,5 @@ btnCheckout.addEventListener('click', () => {
     formOrder.classList.remove('block-hidden');
 })
 
-questContainer.addEventListener('click', (event) => {
-    if(event.target.classList.contains('btn-card-sell')){
-        addQuestBasket();
-    }
-})
-
+addIconBasketBusy();
+getTotalPrice();

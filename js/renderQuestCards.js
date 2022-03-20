@@ -26,8 +26,8 @@ const renderQuestCard = async () => {
             </div>
             <div class="card-body">
                 <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" data-numb="1">Подробнее</button>
-                <button type="button" class="btn btn-info">Приобрести</button>
+                data-bs-target="#staticBackdrop" data-numb="${Number(quest.id)}">Подробнее</button>
+                <button type="button" class="btn btn-info btn-card-sell">Приобрести</button>
             </div>
         </div>
         ` 

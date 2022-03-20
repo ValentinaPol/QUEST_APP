@@ -8,8 +8,9 @@ let totalPrice = document.querySelector('#total-price');
 let addQuestList = document.querySelector('#add-quest-list');
 let btnCheckout = document.querySelector('#checkout-btn');
 let iconShoppingBasket = document.querySelector('.fa-cart-shopping');
+let iconBasketBusy = document.querySelector('#basket-busy');
+let questContainer = document.querySelector('#info-quests');
 //const formOrder = document.querySelector('#order-form');
-
 
 iconShoppingBasket.addEventListener('click', function(){
     document.querySelector('#header-text').classList.add('block-hidden');
@@ -39,6 +40,8 @@ function addQuestBasket(){
         `
         btnCheckout.classList.remove('block-hidden');
         btnCheckout.classList.add('block-open');
+        iconBasketBusy.classList.remove('block-hidden');
+        document.querySelector('#search-box').style.display = 'none';
     }
     
     getTotalPrice();
@@ -70,6 +73,7 @@ function shoppingBasketEmpty(){
         `
         btnCheckout.classList.remove('block-open');
         btnCheckout.classList.add('block-hidden');
+        iconBasketBusy.classList.add('block-hidden');
     }
     
 }
@@ -97,5 +101,11 @@ function addRepeatQuest(){
 btnCheckout.addEventListener('click', () => {
     shoppingListBasket.classList.add('block-hidden');
     formOrder.classList.remove('block-hidden');
+})
+
+questContainer.addEventListener('click', (event) => {
+    if(event.target.classList.contains('btn-card-sell')){
+        addQuestBasket();
+    }
 })
 

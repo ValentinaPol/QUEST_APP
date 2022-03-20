@@ -14,49 +14,32 @@
 
 <body class="position-relative">
   <div class="content bg-dark text-white">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
-      <div class="container-fluid">
-        <a class="navbar-brand text-warning" href="#">BEST QUESTS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Подборать квест</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Сертификаты</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Игрокам
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link">Контакты</a>
-            </li>
-          </ul>
-          <!--<form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Поиск квеста" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Поиск</button> 
-          </form>-->
-        </div>
+    <header>
+      <div class="logo">
+          <p>BEST QUESTS</p>
       </div>
-    </nav>
+      <div class="header-links">
+          <nav>
+              <ul class="menu">
+                  <li><a href="#">Подобрать квест</a></li>
+                  <li><a href="#">Игрокам</a></li>
+                  <li><a href="#">Оставить отзыв</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <span id="close" class="hidden">
+                      x
+                  </span>
+              </ul>
+          </nav>
+      </div>
+      <span class="burger-menu">
+          <img src="./images/burger.svg" alt="burger">
+      </span>
+  </header>
+
     <div class="container mt-2">
       <div class="mt-2 mb-3 d-flex justify-content-end" id="shopping-basket">
-        <span><i class="fa-solid fa-cart-shopping"></i></span>
+        <span><i class="fa-solid fa-cart-shopping" id="icon-basket"></i></span>
+        <i class="fa-solid fa-circle block-hidden" id="basket-busy"></i>
       </div>
       <div class="row pt-3">
         <div class="shopping-list block-hidden" id="shopping-list">
@@ -249,7 +232,7 @@
       </div>
     </div>
     <div class="row d-flex justify-content-center">
-      <div class="col-9">
+      <div class="col-9" id="search-box">
         <div class="input-group mb-3">
           <i class="fa-solid fa-magnifying-glass" id="search-quest-picture"></i>
           <input type="text" class="form-control" placeholder="Введите название квеста" id="search-value">
@@ -323,12 +306,14 @@
   </div>
 
   <script src="./js/renderQuestCards.js"></script>
+  <script src="./js/header.js"></script>
   <script src="./js/modalInfoQuests.js"></script>
   <script src="./js/addQuestsInShoppingBasket.js"></script>
   <script src="./js/validFormOrder.js"></script>
   <script src="./js/sortButtonsQuests.js"></script>
   <script src="./js/questsFilter.js"></script>
   <script src="./js/searchQuests.js"></script>
+  
 
 
 

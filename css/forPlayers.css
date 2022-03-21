@@ -1,0 +1,16 @@
+.accordion-box{
+    height: 100vh;
+}
+
+.accordion-box .list-group .list-group-item{
+    cursor: pointer;
+}
+
+.accordion-box .list-group .list-group-item.answer-item{
+    cursor: inherit;
+    display: none;
+}
+
+.accordion-box .list-group .list-group-item.answer-item-show{
+    display: block;
+}

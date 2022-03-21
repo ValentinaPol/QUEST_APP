@@ -122,7 +122,6 @@ header .header-links nav .menu.show{
     color: red;
 }
 
-
 @media screen and (max-width: 1024px){
     header .burger-menu{
         display: inline-block;

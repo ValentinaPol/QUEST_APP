@@ -1,4 +1,4 @@
-URL_QUESTS = 'http://localhost:3000/quests';
+URL_QUESTS = 'https://quests-app555.herokuapp.com/api/quests';
 
 
 const getQuestsInfo = async () => {
@@ -26,7 +26,7 @@ const renderQuestCard = async () => {
             </div>
             <div class="card-body">
                 <button type="button" class="btn btn-info info-more" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" data-numb="${Number(quest.id)}">Подробнее</button>
+                data-bs-target="#staticBackdrop" data-numb="${Number(quest.pos)}">Подробнее</button>
                 <button type="button" class="btn btn-info btn-card-sell">Приобрести</button>
             </div>
         </div>

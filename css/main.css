@@ -122,6 +122,10 @@ header .header-links nav .menu.show{
     color: red;
 }
 
+.height-min-view{
+    height: 100vh;
+}
+
 @media screen and (max-width: 1024px){
     header .burger-menu{
         display: inline-block;

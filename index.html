@@ -13,6 +13,7 @@
 </head>
 
 <body class="position-relative">
+  
   <div class="content bg-dark text-white">
     <header>
       <div class="logo">
@@ -97,7 +98,7 @@
     </div>
     <div class="container mb-3" id="select-container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-xxl-3 pb-2">
           <select class="form-select" id="quest-type" aria-label="Default select example" data-type="type">
             <option selected>Тип квеста</option>
             <option value="1">Квест</option>
@@ -105,7 +106,7 @@
             <option value="3">Перформанс</option>
           </select>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-xxl-3 pb-2">
           <select class="form-select" id="amount-participant" aria-label="Default select example" data-type="players">
             <option selected>Количество игроков</option>
             <option value="2">2</option>
@@ -119,7 +120,7 @@
             <option value="10">10</option>
           </select>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-xxl-3 pb-2">
           <select class="form-select" aria-label="Default select example" data-type="age">
             <option selected>Возраст</option>
             <option value="1">8+</option>
@@ -129,7 +130,7 @@
             <option value="5">16+</option>
           </select>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-sm-6 col-xxl-3 pb-2">
           <select class="form-select" aria-label="Default select example" data-type="time">
             <option selected>Время квеста</option>
             <option value="1">45 мин</option>
@@ -141,30 +142,33 @@
         </div>
       </div>
     </div>
-    <div class="container  mb-5" id="sort-container">
+    <div class="container mb-5" id="sort-container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-6 col-md-3 mb-2">
           <button type="button" class="btn btn-info w-100" id="for-children" data-tag="childish">Для детей</button>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-md-3 mb-2">
           <button type="button" class="btn btn-info w-100" id="popular-quests" data-tag="active">Активные</button>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-md-3 mb-2">
           <button type="button" class="btn btn-info w-100" id="horrible-quests" data-tag="horrible">Страшные</button>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-md-3 mb-2">
           <button type="button" class="btn btn-info w-100" id="with-actor" data-tag="actors">С актерами</button>
         </div>
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-9" id="search-box">
-        <div class="input-group mb-3">
-          <i class="fa-solid fa-magnifying-glass" id="search-quest-picture"></i>
-          <input type="text" class="form-control" placeholder="Введите название квеста" id="search-value">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12" id="search-box">
+          <div class="input-group mb-3">
+            <i class="fa-solid fa-magnifying-glass" id="search-quest-picture"></i>
+            <input type="text" class="form-control" placeholder="Введите название квеста" id="search-value">
+          </div>
         </div>
       </div>
     </div>
+    
     
 
     <div class="container" id="quest-container">
@@ -229,7 +233,7 @@
       </div>
     </div>  -->
 
-    <div class="row mt-5">
+    
       <footer class="text-center text-lg-start bg-dark">
         <div class="container-fluid d-flex justify-content-center py-5">
           <button type="button" class="btn btn-lg bg-info btn-floating mx-2" style="background-color: #54456b;">
@@ -254,7 +258,7 @@
         <!-- Copyright -->
       </footer>
       
-    </div>
+    
      
   </div>
 

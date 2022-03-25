@@ -97,6 +97,16 @@ header .header-links nav .menu.show{
     width: 300px;
     margin-top: 30px;
 }
+/* Review */
+.card-review{
+    width: 300px;
+    margin-top: 30px;
+}
+
+.text-review-height{
+    height: 160px;
+}
+
 
 #search-value{
     position: relative;

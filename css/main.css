@@ -136,6 +136,8 @@ header .header-links nav .menu.show{
     height: 100vh;
 }
 
+/* Footer */
+
 @media screen and (max-width: 1024px){
     header .burger-menu{
         display: inline-block;

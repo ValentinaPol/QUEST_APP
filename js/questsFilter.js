@@ -1,5 +1,4 @@
 const filterContainer = document.querySelector('#select-container');
-//const questListTags = document.querySelector('#info-quests');
 let currentFilter = {};
 
 const filterQuests = (event) => {

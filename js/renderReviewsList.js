@@ -1,15 +1,6 @@
-const REVIEWS_URL = 'https://quest-reviews-app.herokuapp.com/api/reviews';
 
-const getDataReviews = async () => {
-    try{
-        const fetchRes = await fetch(REVIEWS_URL);
-        return fetchRes.json();
-    } catch (e) {
-        console.log(e);
-    }
-}
 
-const renderReviewsCards = async () => {
+const renderReviewsList = async () => {
     let data = await getDataReviews();
     let reviewsList = document.querySelector('#reviews-list');
     reviewsList.innerHTML = '';
@@ -27,5 +18,5 @@ const renderReviewsCards = async () => {
     
 }
 
-renderReviewsCards();
+renderReviewsList();
 

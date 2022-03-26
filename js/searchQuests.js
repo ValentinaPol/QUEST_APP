@@ -33,7 +33,6 @@ const inputSearchQuests = async (event) => {
     const searchQuests = allQuests.filter((quest) => {
         return (
             quest.title.toLowerCase().includes(searchValue) 
-            //task.shortSummary.toLowerCase().includes(searchValue)
         )
     })
 

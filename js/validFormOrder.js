@@ -36,7 +36,7 @@ const validateSurname = () => {
 inputSurname.addEventListener('blur', validateSurname);
 
 const validatePhoneNumber = () => {
-    if(inputPhoneNumber.value.trim() !== '' && inputPhoneNumber.value.length == 12 && inputPhoneNumber.value[0] == 3 && inputPhoneNumber.value[1] == 7 && inputPhoneNumber.value[2] == 5){
+    if(inputPhoneNumber.value.trim() !== '' && inputPhoneNumber.value.length == 16 && inputPhoneNumber.value[0] == 3 && inputPhoneNumber.value[1] == 7 && inputPhoneNumber.value[2] == 5){
         inputPhoneNumber.nextElementSibling.nextElementSibling.style.display = 'none';
         return true;
     } else {
@@ -58,6 +58,18 @@ const validateEmail = () => {
 }
 
 inputEmail.addEventListener('blur', validateEmail);
+
+const openDeliveryForm = (event) => {
+    if (event.target.tagName === 'INPUT' && formOrder.elements.inputDeliveryWay[0].checked === true){
+        document.querySelector('.delivery-form').classList.remove('block-hidden');
+    }else {
+        document.querySelector('.delivery-form').classList.add('block-hidden');
+    } 
+}
+
+chooseDeliveryWay.addEventListener('click', (event) => openDeliveryForm(event));
+    
+
 
 const validateCity = () => {
     if(inputCity.value.trim() !== '' && inputCity.value.length >= 3){
@@ -95,50 +107,48 @@ const validateNumberHouse = () => {
 
 inputNumberHouse.addEventListener('blur', validateNumberHouse);
 
-formOrder.addEventListener('submit', (event) =>{
+const validateFormOrder = (() =>{
     var isErrorFound = false;
     if(!validateName() && !isErrorFound){
         inputName.scrollIntoView();
         inputName.focus();
         isErrorFound = true;
-        event.preventDefault();
-
     };
     if(!validateSurname() && !isErrorFound){
         inputSurname.scrollIntoView();
         inputSurname.focus();
         isErrorFound = true;
-        event.preventDefault();
     };
     if(!validatePhoneNumber() && !isErrorFound){
         inputPhoneNumber.scrollIntoView();
         inputPhoneNumber.focus();
         isErrorFound = true;
-        event.preventDefault();
     };
     if(!validateEmail() && !isErrorFound){
         inputEmail.scrollIntoView();
         inputEmail.focus();
         isErrorFound = true;
-        event.preventDefault();
     };
     if(!validateCity() && !isErrorFound){
         inputCity.scrollIntoView();
         inputCity.focus();
         isErrorFound = true;
-        event.preventDefault();
     };
     if(!validateStreet() && !isErrorFound){
         inputStreet.scrollIntoView();
         inputStreet.focus();
         isErrorFound = true;
-        event.preventDefault();
     };
     if(!validateNumberHouse() && !isErrorFound){
         inputNumberHouse.scrollIntoView();
         inputNumberHouse.focus();
         isErrorFound = true;
-        event.preventDefault();
     };
+})
+
+formOrder.addEventListener('submit', (event) => {
+    event.preventDefault();
+    validateFormOrder(); 
+    formOrder.reset();
 })
 

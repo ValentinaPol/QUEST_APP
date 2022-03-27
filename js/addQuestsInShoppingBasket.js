@@ -103,10 +103,13 @@ function addRepeatQuest(){
     return false;
 }
 
-btnCheckout.addEventListener('click', () => {
-    shoppingListBasket.classList.add('block-hidden');
-    formOrder.classList.remove('block-hidden');
-})
+const openOrderForm = () => {
+    window.location.href = "orderForm.html";
+} 
+
+
+btnCheckout.addEventListener('click', openOrderForm);
+    
 
 addIconBasketBusy();
 getTotalPrice();

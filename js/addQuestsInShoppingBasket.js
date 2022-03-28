@@ -1,8 +1,8 @@
 let btnSellQuest = document.querySelector('#sell-quest');
 let questsCardList = document.querySelectorAll('.card-quest');
-let imageQuest = document.querySelector('#image-card-quest');
-let nameQuest = document.querySelector('#modal-title1');
-let questPrice = document.querySelector('#price-quest').children[0];
+//let imageQuest = document.querySelector('#image-card-quest');
+//let nameQuest = document.querySelector('#modal-title1');
+//let questPrice = document.querySelector('#price-quest').children[0];
 let shoppingListBasket = document.querySelector('#shopping-list');
 let totalPrice = document.querySelector('#total-price');
 let addQuestList = document.querySelector('#add-quest-list');
@@ -12,38 +12,46 @@ let iconBasketBusy = document.querySelector('#basket-busy');
 let questContainer = document.querySelector('#info-quests');
 //const formOrder = document.querySelector('#order-form');
 
-iconShoppingBasket.addEventListener('click', function(){
+const openShoppingBasket = () => {
     document.querySelector('#header-text').classList.add('block-hidden');
     document.querySelector('#info-quests').classList.add('block-hidden');
     document.querySelector('#select-container').classList.add('block-hidden');
     document.querySelector('#sort-container').classList.add('block-hidden');
     shoppingListBasket.classList.remove('block-hidden');
     shoppingListBasket.style.minHeight = '100vh';
+}
 
-})
-
+iconShoppingBasket.addEventListener('click', openShoppingBasket);
+    
 const addIconBasketBusy = () => {
     if (addQuestList.children[0].tagName !== 'P'){
         iconBasketBusy.classList.remove('block-hidden');
     }
 }
 
-function addQuestBasket(){
+const addQuestBasket = async (currentPos) => {
     if (addQuestList.children[0].tagName === 'P'){
         addQuestList.children[0].remove();
     }
     if(!addRepeatQuest()){
-        addQuestList.innerHTML += `
+        const infoQuests = await getQuestsInfo();
+        infoQuests.forEach((quest) => {
+            if (quest.pos === currentPos){
+                addQuestList.innerHTML += `
         <tr>
             <td>
-                <img src=${imageQuest.getAttribute('src')} alt="картинка квеста" class="image-shopping-custom">
+                <img src=${quest.url} alt="картинка квеста" class="image-shopping-custom">
             </td>
-            <td>${nameQuest.innerHTML}</td>
+            <td>${quest.title}</td>
             <td><a class="waves-effect btn-light btn btn-discrease">-</a><span class="px-2">1</span><a class="waves-effect btn-light btn btn-increase">+</a></td>
-            <td>${questPrice.innerHTML}</td>
+            <td>${quest.price}</td>
             <td><i class="fa-solid fa-trash-can"></i></td>
         </tr>
         `
+            }
+            
+        });
+        
         btnCheckout.classList.remove('block-hidden');
         btnCheckout.classList.add('block-open');
         document.querySelector('#search-box').style.display = 'none';
@@ -54,7 +62,18 @@ function addQuestBasket(){
 
 btnSellQuest.addEventListener('click', addQuestBasket);
 
-shoppingListBasket.children[0].children[1].addEventListener('click', (event) => {
+const addQuestFromCard = ((event) => {
+    let currentNumb; 
+    if(event.target.classList.contains('btn-card-sell')){
+        currentNumb = Number(event.target.previousElementSibling.dataset.numb); 
+        addQuestBasket(currentNumb);
+    }
+})
+
+questContainer.addEventListener('click', addQuestFromCard);
+   
+
+const changeCounterQuests = ((event) => {
     if(event.target.classList.contains('btn-increase')){
         event.target.previousElementSibling.innerHTML = Number(event.target.previousElementSibling.innerHTML) + 1;
     }
@@ -64,15 +83,19 @@ shoppingListBasket.children[0].children[1].addEventListener('click', (event) => 
     getTotalPrice();
 })
 
-function getTotalPrice(){
+shoppingListBasket.children[0].children[1].addEventListener('click', changeCounterQuests);
+
+const getTotalPrice = () => {
     totalPrice.innerHTML = 0;
     for (let questItem of addQuestList.children){
-        totalPrice.innerHTML = Number(totalPrice.innerHTML) + (parseInt(questItem.children[3].innerHTML)*Number(questItem.children[2].children[1].innerHTML));
+        if (addQuestList.children[0].tagName !== 'P'){
+            totalPrice.innerHTML = Number(totalPrice.innerHTML) + (parseInt(questItem.children[3].innerHTML)*Number(questItem.children[2].children[1].innerHTML));
+        } 
     }
     saveQuests();
 }
 
-function shoppingBasketEmpty(){
+const shoppingBasketEmpty = () => {
     if(addQuestList.children.length === 0){
         addQuestList.innerHTML = `
         <p>Корзина пуста</p>
@@ -85,15 +108,17 @@ function shoppingBasketEmpty(){
 
 shoppingBasketEmpty();
 
-addQuestList.addEventListener('click', function(event){
+const deleteQuestShoppingBasket = (event) => {
     if (event.target.tagName === 'I'){
         event.target.parentElement.parentElement.remove();
     }
     getTotalPrice();
     shoppingBasketEmpty();
-})
+}
 
-function addRepeatQuest(){
+addQuestList.addEventListener('click', deleteQuestShoppingBasket);
+
+const addRepeatQuest = () => {
     for (let questItem of addQuestList.children){
        if(questItem.children[1].innerHTML === nameQuest.innerHTML){
         questItem.children[2].children[1].innerHTML = +questItem.children[2].children[1].innerHTML + 1;

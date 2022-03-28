@@ -42,9 +42,7 @@ const findCurrentQuestMark = () => {
 
 questMark.addEventListener('blur', findCurrentQuestMark);
 
-const postNewReviews = async (event) => {
-    event.preventDefault();
-
+const postNewReviews = async () => {
     let currentQuestTitle = findCurrentQuestTitle();
     let currentQuestMark = findCurrentQuestMark();
 
@@ -68,7 +66,7 @@ const postNewReviews = async (event) => {
     ).then(
         data => {
             console.log(data);
-            getDataReviews()
+            renderReviewsList();
         }
     )
 
@@ -78,5 +76,4 @@ const postNewReviews = async (event) => {
     inputTextReview.value = '';
 }
 
-formReview.addEventListener('submit', postNewReviews);
 

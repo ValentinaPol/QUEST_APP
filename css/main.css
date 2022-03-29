@@ -19,11 +19,6 @@ header .logo p{
     transition: 0.5s;
 }
 
-/*header .logo p:hover{
-    opacity: 0.6;
-    cursor: pointer;
-}*/
-
 header .header-links{
     max-width: 50%;
     width: 100%;
@@ -46,16 +41,15 @@ header .header-links nav .menu li a{
     transition: 0.5s;
 }
 
-/*header .header-links nav .menu li a:hover{
-    opacity: 0.6;
-    color:aqua;
-    cursor: pointer;
-}*/
-
 header .header-links nav .menu.show{
     transition: 1s ease-in-out;
     opacity: 1;
     left: 0%;
+}
+
+.custom-breadcrumb ol li{
+    text-decoration: none;
+    color: white;
 }
 
 .image-shopping-custom{
@@ -140,7 +134,15 @@ a.btn-custom-size{
     font-size: 12px;
 }
 
-/* Footer */
+/* Footer*/
+
+footer .contacts-info .phone-number a,
+footer .contacts-info .footer-mail a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Header */
 
 @media screen and (max-width: 1024px){
     header .burger-menu{

@@ -3,6 +3,7 @@
 const questsList = document.querySelector('#info-quests');
 
 const modal = document.querySelector('#modal-quests-information');
+//let btnSellQuest = document.querySelector('#btn-card-sell');
 
 const openModal = async (event) => {
     let currentBtn = event.target;
@@ -41,6 +42,7 @@ const generateModalInfo =  async (currentPos) => {
             modalDescription.innerHTML = quest.description;
             questPrice.children[0].innerHTML = quest.price;
             imageQuest.setAttribute('src', quest.url);
+            btnSellQuest.setAttribute('data-numb', quest.pos);
         }
     })
 }

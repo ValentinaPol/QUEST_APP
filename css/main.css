@@ -136,6 +136,10 @@ header .header-links nav .menu.show{
     height: 100vh;
 }
 
+a.btn-custom-size{
+    font-size: 12px;
+}
+
 /* Footer */
 
 @media screen and (max-width: 1024px){

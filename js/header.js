@@ -1,6 +1,7 @@
 const headerMenu = document.querySelector('.menu');
 const burgerBtn = document.querySelector('.burger-menu');
 const closeBtn = document.querySelector('#close');
+const contactsLink = document.querySelector('#header-contacts');
 
 
 const showBurgerMenu = () => {
@@ -30,3 +31,11 @@ const deleteHeaderLinkEffect = ((event) =>{
 headerMenu.addEventListener('mouseover', addHeaderLinkEffect);
 
 headerMenu.addEventListener('mouseout', deleteHeaderLinkEffect);
+
+
+
+const sctollToContacts = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+contactsLink.addEventListener('click', sctollToContacts);

@@ -10,6 +10,7 @@ const inputStreet = document.querySelector('#floatingInputStreet');
 const inputNumberHouse = document.querySelector('#floatingInputHouse');
 const inputComment = document.querySelector('#add-comment');
 const btnAddOrder = document.querySelector('#order-btn');
+const orderModal = document.querySelector('#modal-quest-repeat');
 
 const validateName = () => {
     if(inputName.value.trim() !== '' && inputName.value[0] === inputName.value[0].toUpperCase() && inputName.value.length >= 3){
@@ -150,5 +151,23 @@ formOrder.addEventListener('submit', (event) => {
     event.preventDefault();
     validateFormOrder(); 
     formOrder.reset();
+    openOrderModal();
 })
 
+
+const openOrderModal= () => {
+    orderModal.classList.add('modal_open');
+}
+
+const closeOrderModal = (event) => {
+    if(event.key === 'Escape' && orderModal.classList.contains('modal_open')){
+        orderModal.classList.remove('modal_open');
+    }
+    if(event.target.classList.contains('btn-modal-close')){
+        orderModal.classList.remove('modal_open');
+    }
+}
+
+window.addEventListener('keydown', closeOrderModal);
+
+orderModal.addEventListener('click', closeOrderModal);

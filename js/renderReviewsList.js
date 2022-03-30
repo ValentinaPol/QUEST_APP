@@ -1,5 +1,3 @@
-
-
 const renderReviewsList = async () => {
     let data = await getDataReviews();
     let reviewsList = document.querySelector('#reviews-list');

@@ -1,9 +1,5 @@
-
-
 const questsList = document.querySelector('#info-quests');
-
 const modal = document.querySelector('#modal-quests-information');
-//let btnSellQuest = document.querySelector('#btn-card-sell');
 
 const openModal = async (event) => {
     let currentBtn = event.target;

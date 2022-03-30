@@ -1,8 +1,5 @@
-//const formReview = document.querySelector('#form-review');
-//const inputReviewerName = document.querySelector('#fname-review');
 const chooseQuestName = document.querySelector('#quest-title-review');
 const chooseQuestMark = document.querySelector('#quest-mark');
-//const inputTextReview = document.querySelector('#review-text');
 
 const validateReviewerName = () => {
     if(inputReviewerName.value.trim() !== '' && inputReviewerName.value[0] === inputReviewerName.value[0].toUpperCase() && inputReviewerName.value.length >= 3){
@@ -90,6 +87,5 @@ formReview.addEventListener('submit', (event) => {
     event.preventDefault();
     if(validateFormReview()){
         postNewReviews();
-    }
-    
+    } 
 })

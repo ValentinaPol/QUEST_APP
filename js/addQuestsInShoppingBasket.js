@@ -1,8 +1,5 @@
 let btnSellQuest = document.querySelector('#sell-quest');
 let questsCardList = document.querySelectorAll('.card-quest');
-//let imageQuest = document.querySelector('#image-card-quest');
-//let nameQuest = document.querySelector('#modal-title1');
-//let questPrice = document.querySelector('#price-quest').children[0];
 let shoppingListBasket = document.querySelector('#shopping-list');
 let totalPrice = document.querySelector('#total-price');
 let addQuestList = document.querySelector('#add-quest-list');
@@ -10,7 +7,6 @@ let btnCheckout = document.querySelector('#checkout-btn');
 let iconShoppingBasket = document.querySelector('.fa-cart-shopping');
 let iconBasketBusy = document.querySelector('#basket-busy');
 let questContainer = document.querySelector('#info-quests');
-//const formOrder = document.querySelector('#order-form');
 
 const openShoppingBasket = () => {
     document.querySelector('#header-text').classList.add('block-hidden');

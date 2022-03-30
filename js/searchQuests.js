@@ -1,5 +1,3 @@
-
-
 const displaySearchQuests = async (allQuests) => {
     allQuests = allQuests || await getQuestsInfo();
     let questContainer = document.querySelector('#info-quests');

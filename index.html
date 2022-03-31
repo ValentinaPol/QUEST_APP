@@ -35,8 +35,13 @@
         <img src="./images/burger.svg" alt="burger">
       </span>
     </header>
+    <div class="block-hidden" id="main-page-preloader">
+      <div class="ring">Loading
+          <span class="preloader"></span>
+      </div>
+    </div>
 
-    <div class="container mt-2">
+    <div class="container mt-2" id="head-content">
       <div class="custom-breadcrumb" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page"><a href="index.html" class="text-light">Главная</a></li>
@@ -134,7 +139,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" id="search-container">
       <div class="row d-flex justify-content-center">
         <div class="col-12" id="search-box">
           <div class="input-group mb-3">
@@ -208,8 +213,10 @@
 
   <script src="./js/shoppingBasketLocalStorage.js"></script>
   <script src="./js/utils.js"></script>
-  <script src="./js/renderQuestCards.js"></script>
   <script src="./js/header.js"></script>
+  <script src="./js/preloaderMainPage.js"></script>
+  <script src="./js/renderQuestCards.js"></script>
+  <script src="./js/addElementsEffect.js"></script>
   <script src="./js/modalInfoQuests.js"></script>
   <script src="./js/addQuestsInShoppingBasket.js"></script>
   <script src="./js/sortButtonsQuests.js"></script>

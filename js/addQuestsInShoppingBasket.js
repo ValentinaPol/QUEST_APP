@@ -88,7 +88,7 @@ const changeCounterQuests = ((event) => {
     getTotalPrice();
 })
 
-shoppingListBasket.children[0].children[1].addEventListener('click', changeCounterQuests);
+shoppingListBasket.children[0].children[0].addEventListener('click', changeCounterQuests);
 
 const getTotalPrice = () => {
     totalPrice.innerHTML = 0;

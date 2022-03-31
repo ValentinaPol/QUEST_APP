@@ -1,4 +1,9 @@
+let reviewsContainer = document.querySelector('#main-reviews-container');
+let preloader = document.querySelector('#preloader');
+
 const renderReviewsList = async () => {
+    reviewsContainer.classList.add('block-hidden');
+    preloader.classList.remove('block-hidden');
     let data = await getDataReviews();
     let reviewsList = document.querySelector('#reviews-list');
     reviewsList.innerHTML = '';
@@ -13,8 +18,13 @@ const renderReviewsList = async () => {
         </div>
         `
     })
-    
+    setTimeout(openRewiewPreloader, 1000);
 }
 
 renderReviewsList();
+
+const openRewiewPreloader = () => {
+    reviewsContainer.classList.remove('block-hidden');
+    preloader.classList.add('block-hidden');
+}
 

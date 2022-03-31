@@ -1,4 +1,5 @@
 const renderQuestCard = async () => {
+    swichPreloader();
     let data = await getQuestsInfo();
     data.forEach(quest =>{
         let questContainer = document.querySelector('#info-quests');
@@ -20,6 +21,7 @@ const renderQuestCard = async () => {
         </div>
         ` 
     })
+    swichPreloader();
 }
 
 renderQuestCard();

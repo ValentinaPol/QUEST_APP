@@ -1,4 +1,3 @@
-
 const inputReviewerName = document.querySelector('#fname-review');
 const questTitle = document.querySelector('#quest-title-review');
 const questMark = document.querySelector('#quest-mark');

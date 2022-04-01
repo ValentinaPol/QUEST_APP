@@ -101,7 +101,7 @@ const getTotalPrice = () => {
 }
 
 const shoppingBasketEmpty = () => {
-    if(addQuestList.children.length === 0){
+    if(addQuestList.children.length === 0 || addQuestList.children[0].tagName === 'P'){
         addQuestList.innerHTML = `
         <p>Корзина пуста</p>
         `

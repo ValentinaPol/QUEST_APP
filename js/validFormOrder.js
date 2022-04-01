@@ -151,6 +151,7 @@ const validateFormOrder = (() =>{
     return !isErrorFound;
 })
 
+
 formOrder.addEventListener('submit', (event) => {
     event.preventDefault();
     let isValidForm = validateFormOrder(); 

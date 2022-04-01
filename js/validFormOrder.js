@@ -130,28 +130,35 @@ const validateFormOrder = (() =>{
         inputEmail.focus();
         isErrorFound = true;
     };
-    if(!validateCity() && !isErrorFound){
-        inputCity.scrollIntoView();
-        inputCity.focus();
-        isErrorFound = true;
-    };
-    if(!validateStreet() && !isErrorFound){
-        inputStreet.scrollIntoView();
-        inputStreet.focus();
-        isErrorFound = true;
-    };
-    if(!validateNumberHouse() && !isErrorFound){
-        inputNumberHouse.scrollIntoView();
-        inputNumberHouse.focus();
-        isErrorFound = true;
-    };
+    if(formOrder.elements.inputDeliveryWay[0].checked){
+        if(!validateCity() && !isErrorFound){
+            inputCity.scrollIntoView();
+            inputCity.focus();
+            isErrorFound = true;
+        };
+        if(!validateStreet() && !isErrorFound){
+            inputStreet.scrollIntoView();
+            inputStreet.focus();
+            isErrorFound = true;
+        };
+        if(!validateNumberHouse() && !isErrorFound){
+            inputNumberHouse.scrollIntoView();
+            inputNumberHouse.focus();
+            isErrorFound = true;
+        };
+    }
+    
+    return !isErrorFound;
 })
 
 formOrder.addEventListener('submit', (event) => {
     event.preventDefault();
-    validateFormOrder(); 
+    let isValidForm = validateFormOrder(); 
     formOrder.reset();
-    openOrderModal();
+    if(isValidForm){
+        openOrderModal();
+        localStorage.removeItem('list-quests');
+    } 
 })
 
 

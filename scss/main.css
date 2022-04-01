@@ -65,6 +65,10 @@ header .header-links nav .menu.show {
   color: white;
 }
 
+.content {
+  padding-top: 50px;
+}
+
 .image-shopping-custom {
   width: 200px;
   max-width: 100%;
@@ -142,60 +146,6 @@ footer .contacts-info .phone-number a,
 footer .contacts-info .footer-mail a {
   text-decoration: none;
   color: white;
-}
-
-/* Header */
-@media screen and (max-width: 1024px) {
-  header .burger-menu {
-    display: inline-block;
-  }
-  header .header-links nav .menu {
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: fixed;
-    top: 0;
-    left: -280px;
-    width: 280px;
-    color: #fff;
-    z-index: 1;
-    padding-top: 130px;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-  header .header-links nav .menu li {
-    margin: 0;
-    padding-bottom: 20px;
-  }
-  header .header-links nav .menu #close {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 17px;
-    font-size: 30px;
-    color: #fff;
-    z-index: 1;
-    -webkit-transition: 1s;
-    transition: 1s;
-  }
-}
-
-@media screen and (max-width: 377px) {
-  #basket-busy {
-    top: 129px;
-  }
 }
 
 #main-page-preloader {
@@ -308,6 +258,59 @@ footer .contacts-info .footer-mail a {
   100% {
     -webkit-transform: rotate(405deg);
             transform: rotate(405deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header .burger-menu {
+    display: inline-block;
+  }
+  header .header-links nav .menu {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    color: #fff;
+    z-index: 1;
+    padding-top: 130px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  header .header-links nav .menu li {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  header .header-links nav .menu #close {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    font-size: 30px;
+    color: #fff;
+    z-index: 1;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  #basket-busy {
+    top: 129px;
   }
 }
 /*# sourceMappingURL=main.css.map */

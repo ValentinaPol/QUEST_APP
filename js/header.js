@@ -4,6 +4,7 @@ const closeBtn = document.querySelector('#close');
 const contactsLink = document.querySelector('#header-contacts');
 
 
+
 const showBurgerMenu = () => {
     headerMenu.classList.add('show');
 }
@@ -34,8 +35,10 @@ headerMenu.addEventListener('mouseout', deleteHeaderLinkEffect);
 
 
 
-const sctollToContacts = () => {
-    window.scrollTo(0, document.body.scrollHeight);
+const sctollToContacts = (event) => {
+    event.preventDefault();
+    document.querySelector('#footer-contacts').scrollIntoView(false);
 }
 
 contactsLink.addEventListener('click', sctollToContacts);
+    

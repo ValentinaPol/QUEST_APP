@@ -40,11 +40,11 @@ const addQuestBasket = async (currentPos) => {
     if(!addRepeatQuest(quest)){
         addQuestList.innerHTML += `
         <tr>
-            <td class="col-1">
+            <td class="col-2">
                 <img src=${quest.url} alt="картинка квеста" class="image-shopping-custom">
             </td>
-            <td class="col-4">${quest.title}</td>
-            <td class="col-4"><a class="waves-effect btn-light btn btn-custom-size btn-discrease py-0 px-1">-</a><span class="px-2">1</span><a class="waves-effect btn-light btn btn-custom-size btn-increase py-0 px-1">+</a></td>
+            <td class="col-5">${quest.title}</td>
+            <td class="col-3"><a class="waves-effect btn-light btn btn-custom-size btn-discrease py-0 px-1">-</a><span class="px-2">1</span><a class="waves-effect btn-light btn btn-custom-size btn-increase py-0 px-1">+</a></td>
             <td class="col-1">${quest.price}</td>
             <td class="col-1"><i class="fa-solid fa-trash-can"></i></td>
         </tr>

@@ -18,7 +18,8 @@ header .burger-menu {
   display: none;
 }
 
-header .logo p {
+header .logo p a {
+  text-decoration: none;
   font-size: 22px;
   color: yellow;
   margin: 0;
@@ -26,8 +27,17 @@ header .logo p {
   transition: 0.5s;
 }
 
+header .logo p a:hover {
+  opacity: 0.8;
+  color: aqua;
+}
+
+header .logo p {
+  margin: 0;
+}
+
 header .header-links {
-  max-width: 50%;
+  max-width: 30%;
   width: 100%;
 }
 
@@ -310,7 +320,7 @@ footer .contacts-info .footer-mail a {
 
 @media screen and (max-width: 377px) {
   #basket-busy {
-    top: 129px;
+    top: 94px;
   }
 }
 /*# sourceMappingURL=main.css.map */

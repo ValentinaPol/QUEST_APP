@@ -21,7 +21,10 @@ const filterQuests = (event) => {
 }
 
 filterContainer.addEventListener('click', filterQuests);
-filterContainer.addEventListener('touchstart', filterQuests);
+filterContainer.addEventListener('touchstart', (event) => {
+    filterQuests(event);
+    alert(event.target.classList.contains('form-select'));
+});
 
 const displayFilterTasks = async () => {
     let data = await getQuestsInfo();
